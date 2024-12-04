@@ -70,7 +70,7 @@
         "from sklearn.neighbors import KNeighborsClassifier\n",
         "from sklearn import datasets"
       ],
-      "execution_count": 1,
+      "execution_count": 30,
       "outputs": []
     },
     {
@@ -81,7 +81,7 @@
       "metadata": {
         "id": "167jISBahmSu"
       },
-      "execution_count": 2,
+      "execution_count": 31,
       "outputs": []
     },
     {
@@ -94,9 +94,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "IoKfdTQrKGnM",
-        "outputId": "59ca8d71-994a-4201-e281-94be114df6ca"
+        "outputId": "2415f7bf-2acf-43f8-ca6b-174257da8d7c"
       },
-      "execution_count": 3,
+      "execution_count": 32,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -106,7 +106,7 @@
             ]
           },
           "metadata": {},
-          "execution_count": 3
+          "execution_count": 32
         }
       ]
     },
@@ -121,9 +121,9 @@
           "height": 478
         },
         "id": "l1Fp6m9jhrpP",
-        "outputId": "3b8a9516-2f15-4285-e5b0-9c0ddc0d7085"
+        "outputId": "687b4290-6395-49f1-cf96-510fa96fe473"
       },
-      "execution_count": 4,
+      "execution_count": 33,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -198,7 +198,7 @@
             ],
             "text/html": [
               "\n",
-              "  <div id=\"df-ef8661da-bb82-4e28-a133-e3fc2fb558d6\" class=\"colab-df-container\">\n",
+              "  <div id=\"df-9a5a1f40-ac94-4b30-ab9c-a3a84ec069f2\" class=\"colab-df-container\">\n",
               "    <div>\n",
               "<style scoped>\n",
               "    .dataframe tbody tr th:only-of-type {\n",
@@ -512,7 +512,7 @@
               "    <div class=\"colab-df-buttons\">\n",
               "\n",
               "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-ef8661da-bb82-4e28-a133-e3fc2fb558d6')\"\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-9a5a1f40-ac94-4b30-ab9c-a3a84ec069f2')\"\n",
               "            title=\"Convert this dataframe to an interactive table.\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -564,12 +564,12 @@
               "\n",
               "    <script>\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#df-ef8661da-bb82-4e28-a133-e3fc2fb558d6 button.colab-df-convert');\n",
+              "        document.querySelector('#df-9a5a1f40-ac94-4b30-ab9c-a3a84ec069f2 button.colab-df-convert');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
               "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-ef8661da-bb82-4e28-a133-e3fc2fb558d6');\n",
+              "        const element = document.querySelector('#df-9a5a1f40-ac94-4b30-ab9c-a3a84ec069f2');\n",
               "        const dataTable =\n",
               "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
               "                                                    [key], {});\n",
@@ -589,8 +589,8 @@
               "  </div>\n",
               "\n",
               "\n",
-              "<div id=\"df-37e3e48e-9835-4b17-8981-853546133c1b\">\n",
-              "  <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-37e3e48e-9835-4b17-8981-853546133c1b')\"\n",
+              "<div id=\"df-cbe93918-170c-4095-90ae-e2f37a38f5ef\">\n",
+              "  <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-cbe93918-170c-4095-90ae-e2f37a38f5ef')\"\n",
               "            title=\"Suggest charts\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -709,7 +709,7 @@
               "    }\n",
               "    (() => {\n",
               "      let quickchartButtonEl =\n",
-              "        document.querySelector('#df-37e3e48e-9835-4b17-8981-853546133c1b button');\n",
+              "        document.querySelector('#df-cbe93918-170c-4095-90ae-e2f37a38f5ef button');\n",
               "      quickchartButtonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "    })();\n",
@@ -724,7 +724,7 @@
             }
           },
           "metadata": {},
-          "execution_count": 4
+          "execution_count": 33
         }
       ]
     },
@@ -737,7 +737,7 @@
         "X = cancer.data\n",
         "y = cancer.target"
       ],
-      "execution_count": 5,
+      "execution_count": 34,
       "outputs": []
     },
     {
@@ -749,7 +749,7 @@
         "from sklearn.model_selection import train_test_split\n",
         "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.33, random_state = 17)"
       ],
-      "execution_count": 6,
+      "execution_count": 35,
       "outputs": []
     },
     {
@@ -778,7 +778,7 @@
         "    scores = knn.score(X_test,y_test)\n",
         "    scores_list.append(scores)"
       ],
-      "execution_count": 7,
+      "execution_count": 36,
       "outputs": []
     },
     {
@@ -789,7 +789,7 @@
           "height": 542
         },
         "id": "UvD57XSyqSVT",
-        "outputId": "aec961fe-5fc3-47c9-c47e-dda168b18b90"
+        "outputId": "4f993631-e19b-4dd5-f9b3-5fa299d1ae73"
       },
       "source": [
         "Accuracy = [x*100 for x in scores_list]\n",
@@ -801,7 +801,7 @@
         "plt.ylabel('Accuracy in %')\n",
         "plt.show()"
       ],
-      "execution_count": 8,
+      "execution_count": 37,
       "outputs": [
         {
           "output_type": "display_data",
@@ -829,9 +829,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "L_PArXY3phVM",
-        "outputId": "188139c7-1ec8-4c40-b772-c1a4aec0c7d9"
+        "outputId": "9cd75cd7-822a-4c02-acb1-9b0732362e94"
       },
-      "execution_count": 9,
+      "execution_count": 38,
       "outputs": [
         {
           "output_type": "stream",
@@ -901,7 +901,7 @@
       "metadata": {
         "id": "SAp-lfCCiced"
       },
-      "execution_count": 10,
+      "execution_count": 39,
       "outputs": []
     },
     {
@@ -918,9 +918,9 @@
           "height": 472
         },
         "id": "jcNAfOc6ihrv",
-        "outputId": "4c7c358b-befb-4320-8eda-e4f96bf48c9b"
+        "outputId": "b254b58e-4401-445a-e471-f105f4f0aabe"
       },
-      "execution_count": 11,
+      "execution_count": 40,
       "outputs": [
         {
           "output_type": "display_data",
@@ -952,7 +952,7 @@
       "metadata": {
         "id": "v-i6n6y3swm4"
       },
-      "execution_count": 12,
+      "execution_count": 41,
       "outputs": []
     },
     {
@@ -971,7 +971,7 @@
       "metadata": {
         "id": "yUQsEfAjsFaS"
       },
-      "execution_count": 13,
+      "execution_count": 42,
       "outputs": []
     },
     {
@@ -992,9 +992,9 @@
           "height": 542
         },
         "id": "wy9EH2Yms5e_",
-        "outputId": "6cb87980-a9a2-4e0a-a37a-10004d30bbc2"
+        "outputId": "43c346a0-dc8c-4830-dee1-957612c1cf95"
       },
-      "execution_count": 14,
+      "execution_count": 43,
       "outputs": [
         {
           "output_type": "display_data",
@@ -1022,9 +1022,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "sEEUOUOfs7_E",
-        "outputId": "e775d918-e96f-4ef4-9e42-a6f248eb1ce3"
+        "outputId": "51d30fb4-543d-4b38-a862-465b44343cd0"
       },
-      "execution_count": 15,
+      "execution_count": 44,
       "outputs": [
         {
           "output_type": "stream",
@@ -1096,7 +1096,7 @@
       "metadata": {
         "id": "9xjLYb1ZvaqM"
       },
-      "execution_count": 16,
+      "execution_count": 45,
       "outputs": []
     },
     {
@@ -1121,7 +1121,7 @@
       "metadata": {
         "id": "RB0Te1S8uiT6"
       },
-      "execution_count": 17,
+      "execution_count": 46,
       "outputs": []
     },
     {
@@ -1132,7 +1132,7 @@
           "height": 542
         },
         "id": "UjpQTP7QpokH",
-        "outputId": "64eb9131-2c9f-4333-9538-571392626db2"
+        "outputId": "04a975c0-0e52-4187-e9d1-82cbaee412e6"
       },
       "source": [
         "Accuracy = [x*100 for x in cv_scores]\n",
@@ -1144,7 +1144,7 @@
         "plt.ylabel('Mean Cross-validation accuracy in %')\n",
         "plt.show()"
       ],
-      "execution_count": 18,
+      "execution_count": 47,
       "outputs": [
         {
           "output_type": "display_data",
@@ -1171,9 +1171,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "U-XBDufnxbuT",
-        "outputId": "51c7e03b-77bc-4a6f-ac76-7e7706dea809"
+        "outputId": "6e8c0965-642b-460a-f743-b682e31f0cd3"
       },
-      "execution_count": 19,
+      "execution_count": 48,
       "outputs": [
         {
           "output_type": "stream",
@@ -1206,7 +1206,7 @@
       "metadata": {
         "id": "ulg8ESJ77bIz"
       },
-      "execution_count": 20,
+      "execution_count": 49,
       "outputs": []
     },
     {
@@ -1240,7 +1240,7 @@
       "metadata": {
         "id": "GNe4-JTI0tYh"
       },
-      "execution_count": 21,
+      "execution_count": 50,
       "outputs": []
     },
     {
@@ -1254,7 +1254,7 @@
       "metadata": {
         "id": "dwS4wRtFzUK_"
       },
-      "execution_count": 22,
+      "execution_count": 51,
       "outputs": []
     },
     {
@@ -1265,7 +1265,7 @@
       "metadata": {
         "id": "rVg1mxfc0HgB"
       },
-      "execution_count": 23,
+      "execution_count": 52,
       "outputs": []
     },
     {
@@ -1284,7 +1284,7 @@
       "metadata": {
         "id": "yq6yq6FjzmcR"
       },
-      "execution_count": 24,
+      "execution_count": 53,
       "outputs": []
     },
     {
@@ -1305,9 +1305,9 @@
           "height": 542
         },
         "id": "ID5KNvw5zyOb",
-        "outputId": "ce62907e-d373-4ff9-95ec-fd48de3dd825"
+        "outputId": "8cb543f6-27ae-48c4-90fd-4da27ea3097c"
       },
-      "execution_count": 25,
+      "execution_count": 54,
       "outputs": [
         {
           "output_type": "display_data",
@@ -1335,9 +1335,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "8tm1WNW1z0I7",
-        "outputId": "b7044dbb-54cd-49c1-e241-e7c6ad15feb7"
+        "outputId": "b877dfa9-8b3d-4f70-863c-ea0950a83341"
       },
-      "execution_count": 26,
+      "execution_count": 55,
       "outputs": [
         {
           "output_type": "stream",
@@ -1359,7 +1359,7 @@
       "metadata": {
         "id": "8m5kl4pU6oV7"
       },
-      "execution_count": 27,
+      "execution_count": 56,
       "outputs": []
     },
     {
@@ -1371,7 +1371,7 @@
       "metadata": {
         "id": "NIiLVOEPJFLN"
       },
-      "execution_count": 28,
+      "execution_count": 57,
       "outputs": []
     },
     {
@@ -1383,7 +1383,7 @@
       "metadata": {
         "id": "opYbvj4wPr6e"
       },
-      "execution_count": 29,
+      "execution_count": 58,
       "outputs": []
     },
     {
