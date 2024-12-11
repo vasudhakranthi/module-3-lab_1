@@ -64,7 +64,7 @@
         "random.seed(42)\n",
         "np.random.seed(42)"
       ],
-      "execution_count": 1,
+      "execution_count": 18,
       "outputs": []
     },
     {
@@ -114,7 +114,7 @@
         "    xs.append(x)\n",
         "    ys.append(y)"
       ],
-      "execution_count": 2,
+      "execution_count": 19,
       "outputs": []
     },
     {
@@ -125,14 +125,14 @@
           "height": 452
         },
         "id": "8a-Tzv5fclE2",
-        "outputId": "3db73799-5402-4578-b6d6-014ad046a562"
+        "outputId": "e92346ce-80bd-448a-9a35-3ac1da328c5f"
       },
       "source": [
         "plt.plot(xs, ys, 'g+')\n",
         "plt.title('Original data')\n",
         "plt.show()"
       ],
-      "execution_count": 3,
+      "execution_count": 20,
       "outputs": [
         {
           "output_type": "display_data",
@@ -199,7 +199,7 @@
         "    xs.append(x)\n",
         "    ys.append(y)\n"
       ],
-      "execution_count": 4,
+      "execution_count": 21,
       "outputs": []
     },
     {
@@ -210,7 +210,7 @@
           "height": 545
         },
         "id": "LFYv43vpe5Y4",
-        "outputId": "9e1dbe8e-96db-4543-fd35-e111063e1152"
+        "outputId": "e88db540-9549-4418-8996-1d21e3a590e1"
       },
       "source": [
         "plt.figure(figsize=(12, 6))\n",
@@ -218,7 +218,7 @@
         "plt.title('Original data with jitter')\n",
         "plt.show()"
       ],
-      "execution_count": 5,
+      "execution_count": 22,
       "outputs": [
         {
           "output_type": "display_data",
@@ -264,7 +264,7 @@
         "\n",
         "    return sum((ys - y_bar) * (ys - y_bar)) / len(ys)"
       ],
-      "execution_count": 6,
+      "execution_count": 23,
       "outputs": []
     },
     {
@@ -275,7 +275,7 @@
           "height": 545
         },
         "id": "yIRquRB3kcZA",
-        "outputId": "ace479cb-7be2-4d6e-b5ce-8f94327b0483"
+        "outputId": "0fc1da33-b01a-4ecf-ee2a-6ee5ff3346fc"
       },
       "source": [
         "rand_coeffs = (random.randrange(-10, 10), random.randrange(-10, 10), random.randrange(-10, 10))\n",
@@ -287,7 +287,7 @@
         "plt.legend(loc=\"lower right\")\n",
         "plt.show()"
       ],
-      "execution_count": 7,
+      "execution_count": 24,
       "outputs": [
         {
           "output_type": "display_data",
@@ -308,13 +308,13 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "bYbwBb4Ckomw",
-        "outputId": "a0c60a66-64df-451f-af60-5d212bc04244"
+        "outputId": "a5f572c5-0f7b-4b06-b4e2-30f1047c8228"
       },
       "source": [
         "initial_model_loss = loss_mse(ys, y_bar)\n",
         "initial_model_loss"
       ],
-      "execution_count": 8,
+      "execution_count": 25,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -324,7 +324,7 @@
             ]
           },
           "metadata": {},
-          "execution_count": 8
+          "execution_count": 25
         }
       ]
     },
@@ -382,7 +382,7 @@
         "\n",
         "    return (gradient_a, gradient_b, gradient_c)   # return calculated gradients as a a tuple of its 3 parts"
       ],
-      "execution_count": 9,
+      "execution_count": 26,
       "outputs": []
     },
     {
@@ -392,7 +392,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "rN0jR2Dhkpjn",
-        "outputId": "80d46de4-42cd-49a0-8a01-b1ed9175f020"
+        "outputId": "17819a86-d00d-4d32-ec16-d806fd7f8fcf"
       },
       "source": [
         "calc_grad = calc_gradient_2nd_poly(rand_coeffs, hundred_xs, ys)\n",
@@ -411,7 +411,7 @@
         "\n",
         "print(f\"Now have smaller model loss: {updated_model_loss} vs {initial_model_loss}\")"
       ],
-      "execution_count": 10,
+      "execution_count": 27,
       "outputs": [
         {
           "output_type": "stream",
@@ -431,7 +431,7 @@
           "height": 545
         },
         "id": "5rjqrqclk4BI",
-        "outputId": "9b0b94d8-a282-4fd0-d5d6-5b0b3745b94a"
+        "outputId": "a65c5e84-1a7d-4c6a-850b-e18f86eb9fe2"
       },
       "source": [
         "plt.figure(figsize=(12, 6))\n",
@@ -442,7 +442,7 @@
         "plt.legend(loc=\"lower right\")\n",
         "plt.show()"
       ],
-      "execution_count": 11,
+      "execution_count": 28,
       "outputs": [
         {
           "output_type": "display_data",
@@ -519,7 +519,7 @@
         "    updated_model_loss = loss_mse(outputs_y, new_y_bar)\n",
         "    return updated_model_loss, new_model_coeffs, new_y_bar"
       ],
-      "execution_count": 12,
+      "execution_count": 29,
       "outputs": []
     },
     {
@@ -548,7 +548,7 @@
         "    print(losses)\n",
         "    return loss[0], loss[1], loss[2], losses  # (updated_model_loss, new_model_coeffs, new_y_bar, saved loss updates)"
       ],
-      "execution_count": 13,
+      "execution_count": 30,
       "outputs": []
     },
     {
@@ -561,9 +561,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "z3lunb-DH0HM",
-        "outputId": "9cf21410-208f-466b-8fef-d8da04de7770"
+        "outputId": "b7b60d48-6a31-47f4-bfd3-511a8dc60b61"
       },
-      "execution_count": 14,
+      "execution_count": 31,
       "outputs": [
         {
           "output_type": "stream",
@@ -582,7 +582,7 @@
           "height": 545
         },
         "id": "Brk2qRFlmAQM",
-        "outputId": "e1c51ac4-604e-4f43-bc29-73c3ba81a735"
+        "outputId": "639b54e5-8608-4d81-e975-5feb2e4b16db"
       },
       "source": [
         "plt.figure(figsize=(12,6))\n",
@@ -592,7 +592,7 @@
         "plt.legend(loc = \"lower right\")\n",
         "plt.show()"
       ],
-      "execution_count": 15,
+      "execution_count": 32,
       "outputs": [
         {
           "output_type": "display_data",
@@ -622,13 +622,13 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "efY8ehhvmCRz",
-        "outputId": "aaee0894-a5d0-4244-cfd9-db648bb1d5b4"
+        "outputId": "5b552175-627c-4b34-90f0-aa1d27275286"
       },
       "source": [
         "print(f\"Final Coefficients predicted: {GD[1]}\")\n",
         "print(f\"Original Coefficients: {coeffs}\")"
       ],
-      "execution_count": 16,
+      "execution_count": 33,
       "outputs": [
         {
           "output_type": "stream",
@@ -657,7 +657,7 @@
           "height": 564
         },
         "id": "HnswAURtmFBG",
-        "outputId": "70074e98-1f55-40f4-ea93-b6dad982af00"
+        "outputId": "28beaf4b-c30a-4fe7-9d7b-27259fbdba79"
       },
       "source": [
         "plt.figure(figsize=(12, 6))\n",
@@ -670,7 +670,7 @@
         "plt.ylabel('MSE')\n",
         "plt.show()"
       ],
-      "execution_count": 17,
+      "execution_count": 34,
       "outputs": [
         {
           "output_type": "display_data",
